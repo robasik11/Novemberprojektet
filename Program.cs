@@ -11,20 +11,51 @@ namespace Novemberprojektet
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Textbaserat fightingspel");
-            Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine("Battle Arena\n\n");
-            Player P = new Player();
+            Enemies e = new Enemies();
+            Enemies s = new Enemies();
 
-            Console.WriteLine("Vad vill du heta??\n");
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            P.Name();
-            Console.ForegroundColor = ConsoleColor.White;
+            List<Enemies> enemiesList = new List<Enemies>();
+            enemiesList.Add(s);
+            enemiesList.Add(s);
+            Console.WriteLine(s.Attack());
+            s.Inusult(s);
 
-            Console.WriteLine("\nDu heter " + P.name + " och du börjar med " +  P.hp + " HP" );
 
-            Console.ReadLine();
+            while (true)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Textbaserat fightingspel");
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("Battle Arena\n\n");
+                Player P = new Player();
+                Console.WriteLine("Vad vill du heta??\n");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                P.Name();
+                Console.ForegroundColor = ConsoleColor.White;
+
+                Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
+
+                Console.ReadKey();
+
+                Console.Clear();
+                Input I = new Input();
+                int index = Input.Selection();
+                if (index == 0)
+                {
+                    I.Spel();
+
+
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+
+
+
 
         }
     }
