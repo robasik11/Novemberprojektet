@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Novemberprojektet
 {
-    class Input : Program
+    class Input
     {
 
-
+        Player P = new Player();
         static string question;
         static string[] option = { " Start", " Quit" };
         static int index = 0;
-        static int d = 0;
+        static string[] fight = { " Fight", " Items", " Quit" +"" };
+        
+       
+
         public static int Selection()
         {
             while (true)
@@ -33,35 +36,76 @@ namespace Novemberprojektet
                     index++;
                 if (input.Key == ConsoleKey.Enter)
                 {
-                    Console.Clear();
 
                     return index;
                 }
+
                 Console.Clear();
+                if (index <= 0)
+                {
+                    index = 0;
+                    Console.Clear();
+                }
+
+                if (index >= 1)
+
+                {
+                    index = 1;
 
 
+                }
             }
-        }
-        
-        
 
-        public void Spel()
+
+        }
+        public static int Spel()
         {
-            if (index == 0)
+            int indexx = 0;
+            while (true)
             {
-                Console.WriteLine("");
+                for (int i = 0; i < fight.Length; i++)
+                {
+                    string text = "";
+                    if (indexx == i)
+                        text += ">";
+                    text += fight[i];
+                    Console.WriteLine(text);
+                }
+                ConsoleKeyInfo input = Console.ReadKey(); //get a key input from the player
+                if (input.Key == ConsoleKey.UpArrow) //go up
+                    indexx--;
+                if (input.Key == ConsoleKey.DownArrow) //go up
+                    indexx++;
+                if (input.Key == ConsoleKey.Enter)
+                {
 
+                    return indexx;
+                }
+
+                Console.Clear();
+                if (indexx <= 0)
+                {
+                    indexx = 0;
+                    Console.Clear();
+                }
+
+               
+
+                if (indexx >= 2)
+
+                {
+                    indexx = 2;
+
+
+                }
             }
 
+
+
         }
-
-       
-
     }
 
 }
-
-
 
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Novemberprojektet
 {
-    class Slime : Enemies
+    class Slime : Enemy
     {
         static Random generator = new Random();
        public override int Attack()

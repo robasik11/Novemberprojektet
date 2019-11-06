@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Novemberprojektet
 {
-    class Enemies
+    class Enemy
     {
         protected int damage = 7;
         protected int hp = 20;
@@ -19,7 +19,7 @@ namespace Novemberprojektet
         }
 
 
-        public void Inusult(Enemies target)
+        public void Inusult(Enemy target)
         {
             Console.WriteLine(target.name + " är dum");
 

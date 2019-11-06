@@ -10,27 +10,25 @@ namespace Novemberprojektet
     {
         static void Main(string[] args)
         {
+            int i = 0;
 
-            Enemies e = new Enemies();
-            Enemies s = new Enemies();
-
-            List<Enemies> enemiesList = new List<Enemies>();
-            enemiesList.Add(s);
-            enemiesList.Add(s);
-            Console.WriteLine(s.Attack());
-            s.Inusult(s);
 
 
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("Textbaserat fightingspel");
+                if (i == 0)
+                {
+                    Console.WriteLine("Textbaserat fightingspel");
+                }
+
+
                 Console.ReadKey();
                 Console.Clear();
-                Console.WriteLine("Battle Arena\n\n");
+                Console.WriteLine("Battle Arena\n");
                 Player P = new Player();
                 Console.WriteLine("Vad vill du heta??\n");
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.ForegroundColor = ConsoleColor.Green;
                 P.Name();
                 Console.ForegroundColor = ConsoleColor.White;
 
@@ -43,7 +41,9 @@ namespace Novemberprojektet
                 int index = Input.Selection();
                 if (index == 0)
                 {
-                    I.Spel();
+
+
+                    Console.Clear();
 
 
                 }
@@ -52,6 +52,32 @@ namespace Novemberprojektet
                     break;
                 }
 
+                Item N = new Item();
+                int indexx = Input.Spel();
+                {
+                    if (indexx == 0)
+                    {
+
+                        //Fighting
+                        P.PrintName();
+                        Console.WriteLine("Test");
+
+                    }
+
+                    if (indexx == 1)
+                    {
+                        P.Dmg();
+                        P.Printdmg();
+                        N.Sword();
+                        P.Printdmg();
+
+                    }
+
+                    if (indexx == 2)
+                    {
+                        break;
+                    }
+                }
             }
 
 
