@@ -66,9 +66,13 @@ namespace Novemberprojektet
 
                     if (indexx == 1)
                     {
+                        //Items
                         P.Dmg();
                         P.Printdmg();
-                        N.Sword();
+                        P.equippedItem = new Item();
+                        
+                        Console.Clear();
+                        Console.WriteLine(P.equippedItem);
                         P.Printdmg();
 
                     }

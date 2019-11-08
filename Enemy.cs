@@ -8,13 +8,14 @@ namespace Novemberprojektet
 {
     class Enemy
     {
-        protected int damage = 7;
+        public int enemy;
+        protected int enemydamage = 7;
         protected int hp = 20;
         protected string name = "Harry";
 
         public virtual int Attack()
         {
-            return damage;
+            return enemydamage;
 
         }
 

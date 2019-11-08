@@ -27,10 +27,7 @@ namespace Novemberprojektet
 
         }*/
         public int damageBonus = 5;
-        public void Sword()
-        {
-            
-        }
+     
 
 
 
