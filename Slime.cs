@@ -6,16 +6,25 @@ using System.Threading.Tasks;
 
 namespace Novemberprojektet
 {
-    class Slime : Enemy
+    class Slime : Entity
     {
-        static Random generator = new Random();
-       public override int Attack()
-        {
-            return generator.Next(damage);
-
-        }
-      
         
+        public int HpM
+        {
+            get
+            {
+                return hp;
+
+            }
+            set
+            {
+                hp = value;
+
+            }
+        }
+
+
+
 
     }
 }

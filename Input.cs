@@ -9,13 +9,13 @@ namespace Novemberprojektet
     class Input
     {
 
-        Player P = new Player();
+
         static string question;
         static string[] option = { " Start", " Quit" };
         static int index = 0;
-        static string[] fight = { " Fight", " Items", " Quit" +"" };
-        
-       
+        static string[] fight = { " Fight", " Difficulty", " Quit" };
+        static string[] items = { " Easy", " Medium", " Hard", " Go Back" };
+
 
         public static int Selection()
         {
@@ -45,6 +45,8 @@ namespace Novemberprojektet
                 {
                     index = 0;
                     Console.Clear();
+                  
+                    Console.ReadKey();
                 }
 
                 if (index >= 1)
@@ -89,7 +91,7 @@ namespace Novemberprojektet
                     Console.Clear();
                 }
 
-               
+
 
                 if (indexx >= 2)
 
@@ -101,6 +103,48 @@ namespace Novemberprojektet
             }
 
 
+
+        }
+        public static int Items()
+        {
+            Console.Clear();
+            int index3 = 0;
+            while (true)
+            {
+                for (int i = 0; i < items.Length; i++)
+                {
+                    string text = "";
+                    if (index3 == i)
+                        text += ">";
+                    text += items[i];
+                    Console.WriteLine(text);
+                }
+                ConsoleKeyInfo input = Console.ReadKey(); //get a key input from the player
+                if (input.Key == ConsoleKey.UpArrow) //go up
+                    index3--;
+                if (input.Key == ConsoleKey.DownArrow) //go up
+                    index3++;
+                if (input.Key == ConsoleKey.Enter)
+                {
+
+                    return index3;
+                }
+
+                Console.Clear();
+                if (index3 <= 0)
+                {
+                    index3 = 0;
+
+                }
+
+                if (index3 >= 3)
+                {
+                    index3 = 3;
+
+
+                }
+
+            }
 
         }
     }

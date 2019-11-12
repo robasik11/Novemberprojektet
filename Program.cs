@@ -13,6 +13,17 @@ namespace Novemberprojektet
             int i = 0;
 
 
+            Entity e = new Entity();
+            Player p = new Player();
+            Monster m = new Monster();
+
+            /*e.Dmg();
+            e.Health();
+            e.Attack(p);
+            Console.ReadKey();
+            e.Attack(m);
+            */
+
 
             while (true)
             {
@@ -25,19 +36,10 @@ namespace Novemberprojektet
 
                 Console.ReadKey();
                 Console.Clear();
-                Console.WriteLine("Battle Arena\n");
-                Player P = new Player();
-                Console.WriteLine("Vad vill du heta??\n");
-                Console.ForegroundColor = ConsoleColor.Green;
-                P.Name();
-                Console.ForegroundColor = ConsoleColor.White;
+               
+               
 
-                Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
-
-                Console.ReadKey();
-
-                Console.Clear();
-                Input I = new Input();
+                
                 int index = Input.Selection();
                 if (index == 0)
                 {
@@ -52,28 +54,66 @@ namespace Novemberprojektet
                     break;
                 }
 
-                Item N = new Item();
+
                 int indexx = Input.Spel();
                 {
                     if (indexx == 0)
                     {
+                        Console.Clear();
+                        Console.WriteLine("Battle Arena\n");
+                        Entity P = new Entity();
+                        Console.WriteLine("Vad vill du heta??\n");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        P.Name();
+                        Console.ForegroundColor = ConsoleColor.White;
+
+                        Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
 
                         //Fighting
-                        P.PrintName();
-                        Console.WriteLine("Test");
+                        Console.Clear();
 
                     }
 
                     if (indexx == 1)
                     {
                         //Items
-                        P.Dmg();
-                        P.Printdmg();
-                        P.equippedItem = new Item();
                         
-                        Console.Clear();
-                        Console.WriteLine(P.equippedItem);
-                        P.Printdmg();
+                        int index3 = Input.Items();
+                        {
+
+
+                            Console.Clear();
+                            if (index3 == 0)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Lätt");
+                                
+                            }
+
+                            if (index3 == 1)
+                            {
+                                Console.WriteLine("Medel");
+
+                            }
+
+                            if (index3 == 2)
+                            {
+
+                                Console.WriteLine("Svår");
+                            }
+
+                            if (index3 == 3)
+                            {
+
+                                Console.Clear();
+                                
+
+
+                            }
+                        }
+
+
+
 
                     }
 

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Novemberprojektet
 {
-    class Player : Entity
+    class Devil : Entity
     {
-        
+
+
 
     }
 }

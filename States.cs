@@ -6,18 +6,30 @@ using System.Threading.Tasks;
 
 namespace Novemberprojektet
 {
-    class States
+    class States 
     {
-        Random generator = new Random();
-        public int player;
-        public string Encounter;
-        public void randomEncounder()
+        Monster M = new Monster();
+        Slime S = new Slime();
+        Devil D = new Devil();
 
+        public void Easy()
         {
+
+
+        }
+
+        public void Medium()
+        {
+
+
+        }
+
+        public void Hard()
+        {
+
 
         }
 
     }
-
 }
 
