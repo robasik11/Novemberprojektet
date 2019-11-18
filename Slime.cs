@@ -8,22 +8,15 @@ namespace Novemberprojektet
 {
     class Slime : Entity
     {
-        
-        public int HpM
+
+        public Slime()
         {
-            get
-            {
-                return hp;
-
-            }
-            set
-            {
-                hp = value;
-
-            }
+            hp = 50;
+            dmg = 7;
+            name = "Slime";
         }
 
-
+       
 
 
     }

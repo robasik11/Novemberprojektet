@@ -10,7 +10,7 @@ namespace Novemberprojektet
     {
 
 
-        static string question;
+        
         static string[] option = { " Start", " Quit" };
         static int index = 0;
         static string[] fight = { " Fight", " Difficulty", " Quit" };
@@ -44,9 +44,9 @@ namespace Novemberprojektet
                 if (index <= 0)
                 {
                     index = 0;
-                    Console.Clear();
+                    
                   
-                    Console.ReadKey();
+                    
                 }
 
                 if (index >= 1)

@@ -11,10 +11,10 @@ namespace Novemberprojektet
 
         public int hp = 100;
         public string name;
-        public int dmg;
+        public int dmg = 7;
         Random generator = new Random();
-
-        public Item equippedItem;
+        public int heal = 15;
+        
 
        
 
@@ -28,20 +28,10 @@ namespace Novemberprojektet
 
 
 
-        public void Dmg()
+      public void Heal(Entity target)
         {
-            if (equippedItem != null)
-            {
-                Console.WriteLine();
-                dmg = generator.Next(10 + equippedItem.damageBonus, 15 + equippedItem.damageBonus);
-            }
-
-            else
-            {
-
-                dmg = generator.Next(10, 15);
-
-            }
+            target.hp += heal;
+            Console.WriteLine(target.hp);
 
         }
 
@@ -78,9 +68,15 @@ namespace Novemberprojektet
             Console.WriteLine(hp);
         }
 
-        public void PrintName()
+        public void Printstats(Entity target)
         {
-            Console.WriteLine(name);
+            target.name = name;
+            target.hp = hp;
+            target.dmg = dmg;
+            Console.WriteLine(target.name);
+            Console.WriteLine(target.hp + "Hp kvar");
+            Console.WriteLine(target.dmg + "dmg");
+
 
         }
 

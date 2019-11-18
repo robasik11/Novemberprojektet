@@ -10,7 +10,8 @@ namespace Novemberprojektet
     {
         public Monster ()
         {
-            hp = 50;
+            hp = 70;
+            dmg = 10;
         }
      
 

@@ -73,7 +73,7 @@ namespace Novemberprojektet
                         Console.Clear();
 
                     }
-
+                    States S = new States();
                     if (indexx == 1)
                     {
                         //Items
@@ -87,7 +87,7 @@ namespace Novemberprojektet
                             {
                                 Console.Clear();
                                 Console.WriteLine("Lätt");
-                                
+                                S.Easy();
                             }
 
                             if (index3 == 1)

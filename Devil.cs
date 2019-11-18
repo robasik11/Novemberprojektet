@@ -9,7 +9,12 @@ namespace Novemberprojektet
     class Devil : Entity
     {
 
+        public Devil()
+        {
 
+            hp = 100;
+            dmg = 13;
+        }
 
     }
 }
