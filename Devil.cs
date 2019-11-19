@@ -12,6 +12,7 @@ namespace Novemberprojektet
         public Devil()
         {
 
+
             hp = 100;
             dmg = 13;
             name = "Devil";

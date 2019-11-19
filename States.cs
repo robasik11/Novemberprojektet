@@ -8,14 +8,14 @@ namespace Novemberprojektet
 {
     class States
     {
-
+       
         string answer;
-
+       
         Entity E = new Entity();
-        //Entity P = new Player();
+        
         public void Easy(Player P)
         {
-            //Player P = new Player();
+            
             Slime S = new Slime();
             while (P.hp >= 0)
             {
