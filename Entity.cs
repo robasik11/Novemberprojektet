@@ -22,27 +22,28 @@ namespace Novemberprojektet
         public void Attack(Entity target)
         {
             target.hp -= dmg;
-            Console.WriteLine(target.name + " har " + target.hp + " hp kvar!");
+            Console.WriteLine(target.name + " har " + target.hp + " hp kvar, och gjorde " + target.dmg + " dmg");
         }
 
 
 
 
-        public void Heal(Entity target)
+        public void Heal()
         {
+
+
+            if (hp >= 1)
+            {
+                hp += heal;
+                Console.WriteLine(hp);
+            }
+
             if (hp >= 100)
             {
                 hp = 100;
+                Console.WriteLine(hp);
 
             }
-
-            else
-            {
-                target.hp += heal;
-                Console.WriteLine(target.hp);
-            }
-
-
 
         }
 
@@ -81,12 +82,10 @@ namespace Novemberprojektet
 
         public void Printstats(Entity target)
         {
-            target.name = name;
-            target.hp = hp;
-            target.dmg = dmg;
-            Console.WriteLine(target.name);
-            Console.WriteLine(target.hp + "hp kvar");
-            Console.WriteLine(target.dmg + "dmg");
+
+
+            Console.WriteLine(target.name + " har " + target.hp + " hp kvar, och gjorde " + target.dmg + " dmg");
+
 
 
         }

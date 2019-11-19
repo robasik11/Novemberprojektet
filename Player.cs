@@ -8,13 +8,13 @@ namespace Novemberprojektet
 {
     class Player : Entity
     {
-        
+
         public Player()
         {
             hp = 100;
             dmg = 14;
 
-        } 
+        }
 
     }
 }

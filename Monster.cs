@@ -8,22 +8,18 @@ namespace Novemberprojektet
 {
     class Monster : Entity
     {
-        public Monster ()
+        public Monster()
         {
             hp = 70;
             dmg = 10;
+            name = "Monster";
         }
-     
+
 
     }
 
-
-
-    //  Battle methods ---------------------------------------------
-
-
 }
-    
+
 
 
 

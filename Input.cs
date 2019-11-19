@@ -16,7 +16,18 @@ namespace Novemberprojektet
         static string[] fight = { " Fight", " Difficulty", " Quit" };
         static string[] items = { " Easy", " Medium", " Hard", " Go Back" };
 
+        public void Start()
+        {
+            Console.Clear();
+            Console.WriteLine("Battle Arena\n");
+            Entity P = new Entity();
+            Console.WriteLine("Vad vill du heta??\n");
+            Console.ForegroundColor = ConsoleColor.Green;
+            P.Name();
+            Console.ForegroundColor = ConsoleColor.White;
 
+            Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
+        }
         public static int Selection()
         {
             while (true)

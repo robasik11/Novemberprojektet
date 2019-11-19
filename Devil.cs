@@ -14,6 +14,7 @@ namespace Novemberprojektet
 
             hp = 100;
             dmg = 13;
+            name = "Devil";
         }
 
     }

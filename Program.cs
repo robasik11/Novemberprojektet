@@ -14,7 +14,7 @@ namespace Novemberprojektet
 
 
             Entity e = new Entity();
-            Player p = new Player();
+            //Player p = new Player();
             Monster m = new Monster();
 
             /*e.Dmg();
@@ -36,10 +36,10 @@ namespace Novemberprojektet
 
                 Console.ReadKey();
                 Console.Clear();
-               
-               
 
-                
+
+
+
                 int index = Input.Selection();
                 if (index == 0)
                 {
@@ -54,30 +54,33 @@ namespace Novemberprojektet
                     break;
                 }
 
-
+                Input I = new Input();
                 int indexx = Input.Spel();
                 {
+                    States S = new States();
                     if (indexx == 0)
                     {
+                        I.Start();
+                        //Fighting
+                        Console.Clear();
                         Console.Clear();
                         Console.WriteLine("Battle Arena\n");
-                        Entity P = new Entity();
+                        Player P = new Player();
                         Console.WriteLine("Vad vill du heta??\n");
                         Console.ForegroundColor = ConsoleColor.Green;
                         P.Name();
                         Console.ForegroundColor = ConsoleColor.White;
 
                         Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
-
-                        //Fighting
+                        S.Medium(P);
                         Console.Clear();
 
                     }
-                    States S = new States();
+                    
                     if (indexx == 1)
                     {
                         //Items
-                        
+
                         int index3 = Input.Items();
                         {
 
@@ -86,27 +89,54 @@ namespace Novemberprojektet
                             if (index3 == 0)
                             {
                                 Console.Clear();
+                                Console.Clear();
+                                Console.WriteLine("Battle Arena\n");
+                                Player P = new Player();
+                                Console.WriteLine("Vad vill du heta??\n");
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                P.Name();
+                                Console.ForegroundColor = ConsoleColor.White;
+
+                                Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
                                 Console.WriteLine("Lätt");
-                                S.Easy();
+                                S.Easy(P);
                             }
 
                             if (index3 == 1)
                             {
-                                Console.WriteLine("Medel");
+                                Console.Clear();
+                                Console.WriteLine("Battle Arena\n");
+                                Player P = new Player();
+                                Console.WriteLine("Vad vill du heta??\n");
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                P.Name();
+                                Console.ForegroundColor = ConsoleColor.White;
 
+                                Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
+                                Console.WriteLine("Medel");
+                                S.Medium(P);
                             }
 
                             if (index3 == 2)
                             {
+                                Console.Clear();
+                                Console.WriteLine("Battle Arena\n");
+                                Player P = new Player();
+                                Console.WriteLine("Vad vill du heta??\n");
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                P.Name();
+                                Console.ForegroundColor = ConsoleColor.White;
 
+                                Console.WriteLine("\nDu heter " + P.name + " och du börjar med " + P.hp + " HP");
                                 Console.WriteLine("Svår");
+                                S.Hard(P);
                             }
 
                             if (index3 == 3)
                             {
 
                                 Console.Clear();
-                                
+
 
 
                             }
