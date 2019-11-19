@@ -13,7 +13,7 @@ namespace Novemberprojektet
             int i = 0;
 
 
-          
+
 
             //Detta är min while loop som är hela spelet, man kan trycka quit för att lämna spelet
             while (true)
@@ -33,6 +33,9 @@ namespace Novemberprojektet
 
                 //Här börjar min fina input kod, det är som min meny där man kan välja vad man vill göra
                 int index = Input.Selection();
+                //detta kallar jag på min metod som körs och den består av mina inputs som jag gjor i inputklassen, jag har utvecklat den med massor av if-satser
+                //och if-satserna körs OM index är ett värde av dem jag kallat på. För att göra lite coola looper eller menyer i menyer så har jag sat olika INDEX 
+                //input värden i olika INDEX och i olika if-satser. Jag är väldigt nöjd med detta resultat.
                 if (index == 0)
                 {
 
@@ -43,12 +46,17 @@ namespace Novemberprojektet
                 }
                 else
                 {
+                    //om värdet är vadsomhelst utom "0" när man klickar enter så kommer while loopen breaka och spelet quittas.
                     break;
                 }
 
                 Input I = new Input();
                 int indexx = Input.Spel();
                 {
+                    //Om tidigare if-sats kördes då värdet var "0" och och enter trycktes så fortsätter man till nästa meny, här väljer man antingen att spela direkt
+                    //eller så kan man välja "difficulies" där man kan ändra svårihetsgrad, eller så kan man återigen quitta, men i detta fall hamnar
+                    //man i tidigare meny så man kan loopa sig själv.
+                    //väljer man att fighta direkt så startar spelet automatiskt i MEDIUM
                     States S = new States();
                     if (indexx == 0)
                     {
@@ -160,7 +168,7 @@ namespace Novemberprojektet
 
 
 
-
+            //Mina if-satser är välidgt lätta och jag orkar inte förklara varenda en för dem gör på ett ungefär samma sak genom att antingen köra en metod eller breaka beroende på vilket värde dem har
         }
     }
 }

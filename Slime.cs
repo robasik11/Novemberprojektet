@@ -11,6 +11,8 @@ namespace Novemberprojektet
 
         public Slime()
         {
+
+           //Slime Konstruktor
             hp = 50;
             dmg = 7;
             name = "Slime";

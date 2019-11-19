@@ -11,6 +11,7 @@ namespace Novemberprojektet
 
         public Player()
         {
+            //Här har jag valt att göra en specifik konstruktor för vad PLayer ska ha för specifika stats
             hp = 100;
             dmg = 14;
 

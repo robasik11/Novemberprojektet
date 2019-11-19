@@ -11,7 +11,7 @@ namespace Novemberprojektet
 
         public Devil()
         {
-
+            //Devil konstruktor
 
             hp = 100;
             dmg = 13;

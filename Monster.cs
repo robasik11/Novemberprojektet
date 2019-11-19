@@ -10,6 +10,8 @@ namespace Novemberprojektet
     {
         public Monster()
         {
+            //Simpel MonSTER konstruktor, MEDIUM svårighet
+
             hp = 70;
             dmg = 10;
             name = "Monster";
