@@ -14,24 +14,35 @@ namespace Novemberprojektet
         public int dmg = 7;
         Random generator = new Random();
         public int heal = 15;
-        
 
-       
+
+
 
 
         public void Attack(Entity target)
         {
             target.hp -= dmg;
-            Console.WriteLine(target.hp);
+            Console.WriteLine(target.name + " har " + target.hp + " hp kvar!");
         }
 
 
 
 
-      public void Heal(Entity target)
+        public void Heal(Entity target)
         {
-            target.hp += heal;
-            Console.WriteLine(target.hp);
+            if (hp >= 100)
+            {
+                hp = 100;
+
+            }
+
+            else
+            {
+                target.hp += heal;
+                Console.WriteLine(target.hp);
+            }
+
+
 
         }
 
@@ -52,7 +63,7 @@ namespace Novemberprojektet
 
             if (name.Length < 2)
             {
-
+                Console.Clear();
                 Console.WriteLine("Du måste ha ett namn...\n");
                 Name();
 
@@ -74,7 +85,7 @@ namespace Novemberprojektet
             target.hp = hp;
             target.dmg = dmg;
             Console.WriteLine(target.name);
-            Console.WriteLine(target.hp + "Hp kvar");
+            Console.WriteLine(target.hp + "hp kvar");
             Console.WriteLine(target.dmg + "dmg");
 
 
